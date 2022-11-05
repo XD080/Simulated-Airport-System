@@ -1,0 +1,20 @@
+{% extends "layouts/base.html"%}
+
+{% block body %}
+
+{% if error %}
+<div class="alert alert-danger">{{error}}</div>
+{% elif success %}
+<div class="alert alert-success">{{success}}</div>
+{% endif %}
+
+<a href="/login">Login</a>
+<a href="/register">Register</a>
+<a href="/check_flight">Check Flights</a>
+
+{% if message %}
+    {{message}}
+{% endif %}
+
+{% endblock body%}
+
